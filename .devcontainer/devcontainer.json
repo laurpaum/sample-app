@@ -2,7 +2,7 @@
   "name": "Sample",
   // "remoteUser": "quarkus",
 
-  "overrideCommand": true,
+  // "overrideCommand": true,
 
   "dockerComposeFile": "docker-compose.yml",
 	"service": "app",
