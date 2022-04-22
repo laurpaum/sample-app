@@ -1,21 +1,25 @@
 {
   "name": "Sample",
-  // "remoteUser": "quarkus",
-
   "overrideCommand": true,
-
   "dockerComposeFile": "docker-compose.yml",
-	"service": "app",
-	"runServices": [
+  "service": "app",
+  "runServices": [
     "app",
     "mongo",
+    "minio",
     "redis"
   ],
-
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "bash",
+        "args": [
+          "-l"
+        ]
+      }
+    },
+    "terminal.integrated.defaultProfile.windows": "bash"
   },
-
   "extensions": [
     "redhat.java",
     "redhat.vscode-quarkus",
