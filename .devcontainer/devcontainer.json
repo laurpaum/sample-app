@@ -17,6 +17,8 @@
   },
 
   "extensions": [
-    "vscjava.vscode-java-pack"
+    "redhat.java",
+    "redhat.vscode-quarkus",
+    "mongodb.mongodb-vscode"
   ]
 }
