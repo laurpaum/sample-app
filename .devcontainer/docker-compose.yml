@@ -5,7 +5,7 @@ services:
     build: .
     user: quarkus
     volumes:
-    - repository:/home/quarkus/.m2
+    - maven-cache:/home/quarkus/.m2
   mongo:
     image: mongo:5.0
   minio:
@@ -15,4 +15,5 @@ services:
     image: redis:6
 
 volumes:
-  repository:
+  maven-cache:
+    name: shared-maven-cache
