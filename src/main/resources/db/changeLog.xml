@@ -1,0 +1,44 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="1" author="me">
+        <ext:createCollection collectionName="person" />
+    </changeSet>
+
+    <changeSet id="2" author="me">
+        <ext:insertOne collectionName="person">
+            <ext:document>{
+                "name": "Albert Einstein",
+                "birth": {
+                    "$date": "1879-03-14T00:00:00Z"
+                }
+            }</ext:document>
+        </ext:insertOne>
+    </changeSet>
+
+    <changeSet id="3" author="me">
+        <ext:insertMany collectionName="person">
+            <ext:documents>[
+                {
+                    "name": "Werner Heisenberg",
+                    "birth": {
+                        "$date": "1901-12-05T00:00:00Z"
+                    }
+                },{
+                    "name": "Stephen Hawking",
+                    "birth": {
+                        "$date": "1942-01-08T00:00:00Z"
+                    }
+                }
+            ]</ext:documents>
+        </ext:insertMany>
+    </changeSet>
+
+</databaseChangeLog>

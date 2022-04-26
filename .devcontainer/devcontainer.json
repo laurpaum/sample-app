@@ -1,5 +1,6 @@
 {
   "name": "Sample",
+  "workspaceFolder": "/home/quarkus/workspace",
   "overrideCommand": true,
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
@@ -21,7 +22,6 @@
     "terminal.integrated.defaultProfile.windows": "bash"
   },
   "extensions": [
-    "redhat.java",
     "redhat.vscode-quarkus",
     "mongodb.mongodb-vscode"
   ]
